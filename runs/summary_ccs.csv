@@ -1,0 +1,6 @@
+model,n_layers,best_acc,best_layer,mean_acc,max_silhouette,mean_contradiction_idx,polar_consistency_absmean
+olmo2 base,17,0.668,15,0.596,0.386,0.458,0.136
+olmo2 instruct,17,0.888,16,0.633,0.318,0.516,0.106
+gemma3 base,27,0.845,17,0.701,0.322,0.502,0.014
+gemma3 instruct,27,0.936,14,0.773,0.271,0.514,0.036
+olmo1 base,17,0.69,8,0.618,0.43,0.488,0.119

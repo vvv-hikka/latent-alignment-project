@@ -1,0 +1,12 @@
+accelerate
+numpy
+pandas
+scikit-learn
+sentencepiece
+torch
+tqdm
+transformers
+# Behavior experiment generation (GPU host only); also available via the `behavior` extra.
+vllm
+# LLM-judge labeling via OpenRouter; also available via the `judge` extra.
+openai

@@ -1,0 +1,47 @@
+[project]
+name = "latent-alignment-project"
+version = "0.1.0"
+description = "Reusable PA-CCS experiments for latent alignment probing."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "accelerate",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "sentencepiece",
+    "torch",
+    "tqdm",
+    "transformers",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+# Behavior experiment: free-form generation via vLLM (GPU host only).
+behavior = [
+    "vllm",
+]
+# LLM-judge labeling of generations via OpenRouter (OpenAI-compatible client).
+judge = [
+    "openai",
+]
+
+[project.scripts]
+latent-align = "latent_alignment.cli:main"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["latent_alignment*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
